@@ -30,14 +30,6 @@ npm install aman-component-library
 
 Create a folder in your project's file system and fill it with the required component files. You can structure your components in a way that best suits your application. For example, you can create separate folders for buttons, cards, inputs, etc.
 
-/my-project
-  └── /src
-      └── /components
-          ├── Button.js
-          ├── Card.js
-          ├── Input.js
-          └── ...
-
 ## License
     
 MIT License
