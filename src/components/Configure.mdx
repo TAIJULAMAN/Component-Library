@@ -1,42 +1,46 @@
-import { Meta } from "@storybook/blocks";
+import { Meta } from '@storybook/addon-docs';
 
-export const RightArrow = () => (
-  <svg
-    viewBox="0 0 14 14"
-    width="8px"
-    height="14px"
-    style={{
-      marginLeft: "4px",
-      display: "inline-block",
-      shapeRendering: "inherit",
-      verticalAlign: "middle",
-      fill: "currentColor",
-      "path fill": "currentColor",
-    }}
-  >
-    <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-  </svg>
+<Meta title="Configuration Guide" />
+
+# Component Library Configuration Guide
+
+Welcome to the **Aman's Component Library** configuration guide. Here, you'll find everything needed to set up, use, and configure each component effectively.
+
+## Installation
+
+To begin using the component library, install it via npm or yarn:
+
+```bash
+# Using npm
+npm install aman-component-library
+
+# Using yarn
+yarn add aman-component-library
+```
+
+## Usage
+
+To use a component, import it into your project and pass the required props. For example:
+
+```jsx
+import { Checkbox } from 'aman-component-library';
+
+const MyComponent = () => (
+  <Checkbox checked={false} onChange={handleChange} onClick={handleClick} variant="primary" />
 );
+```
 
-<Meta title="Aman's Component Library" />
+## Props
 
-<div className="sb-container">
-  <div className='sb-section-title'>
-    # Aman's Component Library
+Each component has its own set of props that control its behavior and appearance. For a complete list of props and their descriptions, refer to the component's documentation.
 
-    This component library is on development.We are improving it day by day.So please stay tuned for updates.
+## Theming
+The component library supports theming through CSS variables. You can customize the appearance of the components by overriding the default CSS variables in your project's CSS file.
 
-  </div>
-</div>
+## Contributing
 
-<style>
-  {`
-  .sb-container {
-    margin-bottom: 48px;
-  }
+Contributions to the component library are welcome! To contribute, fork the repository, make your changes, and submit a pull request.
 
-  .sb-section-title {
-    margin-bottom: 32px;
-  }
-  `}
-</style>
+## License
+
+The component library is licensed under the MIT License. See the LICENSE file for more information.

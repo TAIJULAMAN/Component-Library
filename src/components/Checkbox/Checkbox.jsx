@@ -1,18 +1,25 @@
 import React from "react";
 
 const Checkbox = ({ checked, onChange, onClick, variant }) => {
-  const baseClasses = "h-5 w-5 border-2 rounded focus:outline-none";
+  const baseClasses = "h-5 w-5 border-2 focus:outline-none";
+
   const variants = {
     default: "border-gray-300 bg-white",
     animated: "transition-transform duration-300 ease-in-out",
     gradient: "bg-gradient-to-r from-pink-500 to-yellow-500",
+    outline: "border-blue-500",
+    rounded: "rounded-full",
+    shadow: "shadow-md",
+    glow: "shadow-lg shadow-blue-400",
   };
 
   const handleClick = () => {
     if (onClick) {
-      onClick(); // Call the onClick function when the checkbox is clicked
+      onClick();
     }
-    onChange(!checked); // Toggle the checked state
+    if (onChange) {
+      onChange(!checked);
+    }
   };
 
   return (
@@ -20,13 +27,14 @@ const Checkbox = ({ checked, onChange, onClick, variant }) => {
       <input
         type="checkbox"
         checked={checked}
-        onChange={handleClick} // Use handleClick instead of onChange directly
+        onChange={handleClick}
         className="hidden"
       />
       <span
         className={`${baseClasses} ${variants[variant]} ${
-          variant === "animated" ? "transform" : ""
-        } ${checked ? "bg-blue-500 border-blue-500" : ""}`}
+          checked ? "bg-blue-500 border-blue-500" : ""
+        } ${variant === "animated" ? "transform" : ""}`}
+        onClick={handleClick}
       >
         {checked && (
           <svg
