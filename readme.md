@@ -24,6 +24,7 @@ To install the Aman Component Library, run:
 
 ```bash
 npm install aman-component-library
+```
 
 ## Setting Up Components
 
