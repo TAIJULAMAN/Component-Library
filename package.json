@@ -1,15 +1,21 @@
 {
-  "name": "aman-component-library",
-  "version": "1.0.0",
+  "name": "component-library-react-tailwind",
+  "version": "1.0.2",
+  "description": "A small component library.We are improving this library.keep an eye and i hope it will be helpful for all",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+
   },
   "keywords": [],
-  "author": "md shah aman patwary",
+  "author": "Md Shah Aman Patwary",
   "license": "ISC",
-  "description": "a small component library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TAIJULAMAN/Component-Library.git"
+  },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
